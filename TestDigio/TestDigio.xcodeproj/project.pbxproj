@@ -3,8 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		003BE3702CBAA79200473934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003BE3672CBAA79200473934 /* Assets.xcassets */; };
+		003BE3722CBAA79200473934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003BE36A2CBAA79200473934 /* LaunchScreen.storyboard */; };
+		003BE3732CBAA79200473934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003BE36C2CBAA79200473934 /* Main.storyboard */; };
+		003BE3742CBAA79200473934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE3662CBAA79200473934 /* AppDelegate.swift */; };
+		003BE3752CBAA79200473934 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE36D2CBAA79200473934 /* SceneDelegate.swift */; };
+		003BE3762CBAA79200473934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE36E2CBAA79200473934 /* ViewController.swift */; };
+		F7C885254C7BE333F514DB6B /* libPods-TestDigio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D34D5344354123391A64B0EE /* libPods-TestDigio.a */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		00E439322CB9C3C700670FC5 /* PBXContainerItemProxy */ = {
@@ -24,47 +34,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		003BE3662CBAA79200473934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		003BE3672CBAA79200473934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		003BE3682CBAA79200473934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		003BE3692CBAA79200473934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		003BE36B2CBAA79200473934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		003BE36D2CBAA79200473934 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		003BE36E2CBAA79200473934 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		00E4391B2CB9C3C500670FC5 /* TestDigio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDigio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E439312CB9C3C700670FC5 /* TestDigioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E4393B2CB9C3C700670FC5 /* TestDigioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0606503E896C0A839581DC1D /* Pods-TestDigio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.release.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.release.xcconfig"; sourceTree = "<group>"; };
+		5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.debug.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.debug.xcconfig"; sourceTree = "<group>"; };
+		D34D5344354123391A64B0EE /* libPods-TestDigio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDigio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		00E439432CB9C3C700670FC5 /* Exceptions for "TestDigio" folder in "TestDigio" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 00E4391A2CB9C3C400670FC5 /* TestDigio */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		00E4391D2CB9C3C500670FC5 /* TestDigio */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				00E439432CB9C3C700670FC5 /* Exceptions for "TestDigio" folder in "TestDigio" target */,
-			);
-			path = TestDigio;
-			sourceTree = "<group>";
-		};
-		00E439342CB9C3C700670FC5 /* TestDigioTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TestDigioTests;
-			sourceTree = "<group>";
-		};
-		00E4393E2CB9C3C700670FC5 /* TestDigioUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = TestDigioUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		00E439182CB9C3C400670FC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C885254C7BE333F514DB6B /* libPods-TestDigio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,13 +75,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003BE36F2CBAA79200473934 /* TestDigio */ = {
+			isa = PBXGroup;
+			children = (
+				003BE3662CBAA79200473934 /* AppDelegate.swift */,
+				003BE3672CBAA79200473934 /* Assets.xcassets */,
+				003BE3682CBAA79200473934 /* Info.plist */,
+				003BE36A2CBAA79200473934 /* LaunchScreen.storyboard */,
+				003BE36C2CBAA79200473934 /* Main.storyboard */,
+				003BE36D2CBAA79200473934 /* SceneDelegate.swift */,
+				003BE36E2CBAA79200473934 /* ViewController.swift */,
+			);
+			path = TestDigio;
+			sourceTree = "<group>";
+		};
 		00E439122CB9C3C400670FC5 = {
 			isa = PBXGroup;
 			children = (
-				00E4391D2CB9C3C500670FC5 /* TestDigio */,
-				00E439342CB9C3C700670FC5 /* TestDigioTests */,
-				00E4393E2CB9C3C700670FC5 /* TestDigioUITests */,
+				003BE36F2CBAA79200473934 /* TestDigio */,
 				00E4391C2CB9C3C500670FC5 /* Products */,
+				2FD9CE02D579C563B55BFAB7 /* Pods */,
+				4A8EEC4954BE58EE5C68EA15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +109,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		2FD9CE02D579C563B55BFAB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */,
+				0606503E896C0A839581DC1D /* Pods-TestDigio.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4A8EEC4954BE58EE5C68EA15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D34D5344354123391A64B0EE /* libPods-TestDigio.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,21 +134,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E439442CB9C3C700670FC5 /* Build configuration list for PBXNativeTarget "TestDigio" */;
 			buildPhases = (
+				F2C08C554D15FF0249821AC6 /* [CP] Check Pods Manifest.lock */,
 				00E439172CB9C3C400670FC5 /* Sources */,
 				00E439182CB9C3C400670FC5 /* Frameworks */,
 				00E439192CB9C3C400670FC5 /* Resources */,
 				005616402CB9CE3B00DF8144 /* ShellScript */,
+				9C6679315C8014391FFDC48A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				00E4391D2CB9C3C500670FC5 /* TestDigio */,
-			);
 			name = TestDigio;
-			packageProductDependencies = (
-			);
 			productName = TestDigio;
 			productReference = 00E4391B2CB9C3C500670FC5 /* TestDigio.app */;
 			productType = "com.apple.product-type.application";
@@ -144,12 +163,7 @@
 			dependencies = (
 				00E439332CB9C3C700670FC5 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				00E439342CB9C3C700670FC5 /* TestDigioTests */,
-			);
 			name = TestDigioTests;
-			packageProductDependencies = (
-			);
 			productName = TestDigioTests;
 			productReference = 00E439312CB9C3C700670FC5 /* TestDigioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -167,12 +181,7 @@
 			dependencies = (
 				00E4393D2CB9C3C700670FC5 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				00E4393E2CB9C3C700670FC5 /* TestDigioUITests */,
-			);
 			name = TestDigioUITests;
-			packageProductDependencies = (
-			);
 			productName = TestDigioUITests;
 			productReference = 00E4393B2CB9C3C700670FC5 /* TestDigioUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -208,8 +217,6 @@
 				Base,
 			);
 			mainGroup = 00E439122CB9C3C400670FC5;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 00E4391C2CB9C3C500670FC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -226,6 +233,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003BE3702CBAA79200473934 /* Assets.xcassets in Resources */,
+				003BE3722CBAA79200473934 /* LaunchScreen.storyboard in Resources */,
+				003BE3732CBAA79200473934 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +275,45 @@
 			shellScript = "if which swiftlint > /dev/null; then\n  echo \"there is a lint\"\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		9C6679315C8014391FFDC48A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2C08C554D15FF0249821AC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestDigio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -272,6 +321,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003BE3742CBAA79200473934 /* AppDelegate.swift in Sources */,
+				003BE3752CBAA79200473934 /* SceneDelegate.swift in Sources */,
+				003BE3762CBAA79200473934 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,9 +356,29 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		003BE36A2CBAA79200473934 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				003BE3692CBAA79200473934 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		003BE36C2CBAA79200473934 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				003BE36B2CBAA79200473934 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		00E439452CB9C3C700670FC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +406,7 @@
 		};
 		00E439462CB9C3C700670FC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0606503E896C0A839581DC1D /* Pods-TestDigio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

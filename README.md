@@ -3,6 +3,9 @@
 ## Sobre o App
 
 Possui com duas telas, uma que exibe uma lista de produtos da Digio Store e outra que exibe o detalhe do produto.
+Utilizando pod(s):
+- https://github.com/SDWebImage/SDWebImage
+    Permite download e atualização imagens da web de maneira acíncrona.
 
 ![Captura de Tela 2024-10-11 às 16 09 18](https://github.com/user-attachments/assets/1bffa957-f10e-498d-b52c-a557e39470bb)
 
