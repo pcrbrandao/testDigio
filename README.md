@@ -7,6 +7,16 @@ Utilizando pod(s):
 - https://github.com/SDWebImage/SDWebImage
     Permite download e atualização imagens da web de maneira acíncrona.
 
+Ambiente de desenvolvimento:
+- XCode 16
+- MacOs Sonoma 14.16.1
+- Ruby 3.3.5
+
+Bugs resolvidos:
+- Incompatibilidade do SwiftLint com XCode 16
+- Imcompatibilidade do CocoaPods com XCode 16
+
+
 ![Captura de Tela 2024-10-11 às 16 09 18](https://github.com/user-attachments/assets/1bffa957-f10e-498d-b52c-a557e39470bb)
 
 
