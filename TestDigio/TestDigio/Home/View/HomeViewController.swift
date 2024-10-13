@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     }()
     
     private var cancellables: [AnyCancellable] = []
+    private let collectionCellNibName = "DigioCollectionViewCell"
     
     @IBOutlet private weak var spotLightCollectionView: UICollectionView!
     @IBOutlet private weak var cashImageView: UIImageView!
@@ -26,7 +27,7 @@ class HomeViewController: UIViewController {
     }
     
     private func configuredSpotLightDataSource() -> UICollectionViewDiffableDataSource<Int, SpotLightModel> {
-        let nib = UINib(nibName: "DigioCollectionViewCell", bundle: nil)
+        let nib = UINib(nibName: collectionCellNibName, bundle: nil)
         let cellReg = UICollectionView.CellRegistration<DigioCollectionViewCell, SpotLightModel>(
             cellNib: nib) { cell, _, itemIdentifier in
                 cell.updateURL(itemIdentifier.bannerURL)
@@ -41,7 +42,7 @@ class HomeViewController: UIViewController {
     }
     
     private func configuredProductsDataSource() -> UICollectionViewDiffableDataSource<Int, ProductModel> {
-        let nib = UINib(nibName: "DigioCollectionViewCell", bundle: nil)
+        let nib = UINib(nibName: collectionCellNibName, bundle: nil)
         let cellReg = UICollectionView.CellRegistration<DigioCollectionViewCell, ProductModel>(
             cellNib: nib) { cell, _, itemIdentifier in
                 cell.updateURL(itemIdentifier.imageURL)
