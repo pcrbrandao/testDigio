@@ -18,10 +18,6 @@ class DigioCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak private var imageView: UIImageView!
     
-    @IBAction func didTapOnImageAction(_ sender: Any) {
-        tapHandler?.handleTapOnModel(self.model)
-    }
-    
     func updateURL(_ url: String) {
         imageView.sd_setImage(with: URL(string: url))
     }
