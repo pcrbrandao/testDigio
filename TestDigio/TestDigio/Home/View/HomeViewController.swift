@@ -33,10 +33,11 @@ class HomeViewController: UIViewController {
                 cell.setModel(itemIdentifier)
                 cell.setTapHandler(self.viewModel)
             }
-        
+        // swiftlint:disable all
         return UICollectionViewDiffableDataSource<Int, SpotLightModel>(collectionView: self.spotLightCollectionView) { collectionView, indexPath, item in
             collectionView.dequeueConfiguredReusableCell(using: cellReg, for: indexPath, item: item)
         }
+        // swiftlint:enable all
     }
     
     private func configuredProductsDataSource() -> UICollectionViewDiffableDataSource<Int, ProductModel> {
