@@ -19,17 +19,29 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cyS-oC-eBa">
                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-jM-yMO">
-                                <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                <gestureRecognizers/>
-                            </imageView>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyf-0n-bcM">
+                                <rect key="frame" x="8" y="8" width="104" height="104"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-jM-yMO">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QX2-jM-yMO" firstAttribute="top" secondItem="zyf-0n-bcM" secondAttribute="top" id="2KB-8G-kze"/>
+                                    <constraint firstAttribute="bottom" secondItem="QX2-jM-yMO" secondAttribute="bottom" id="YsF-tm-3J6"/>
+                                    <constraint firstAttribute="trailing" secondItem="QX2-jM-yMO" secondAttribute="trailing" id="gT2-iP-Uf3"/>
+                                    <constraint firstItem="QX2-jM-yMO" firstAttribute="leading" secondItem="zyf-0n-bcM" secondAttribute="leading" id="jHn-bC-ie2"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QX2-jM-yMO" firstAttribute="top" secondItem="cyS-oC-eBa" secondAttribute="top" id="0o6-Lu-0QI"/>
-                            <constraint firstItem="QX2-jM-yMO" firstAttribute="leading" secondItem="cyS-oC-eBa" secondAttribute="leading" id="71G-mz-Qp5"/>
-                            <constraint firstAttribute="bottom" secondItem="QX2-jM-yMO" secondAttribute="bottom" id="Ymj-aM-kji"/>
-                            <constraint firstAttribute="trailing" secondItem="QX2-jM-yMO" secondAttribute="trailing" id="dR3-yy-3jQ"/>
+                            <constraint firstItem="zyf-0n-bcM" firstAttribute="top" secondItem="cyS-oC-eBa" secondAttribute="top" constant="8" id="3Ct-Pb-joH"/>
+                            <constraint firstAttribute="bottom" secondItem="zyf-0n-bcM" secondAttribute="bottom" constant="8" id="UFF-h3-o7S"/>
+                            <constraint firstAttribute="trailing" secondItem="zyf-0n-bcM" secondAttribute="trailing" constant="8" id="iCY-w6-ypb"/>
+                            <constraint firstItem="zyf-0n-bcM" firstAttribute="leading" secondItem="cyS-oC-eBa" secondAttribute="leading" constant="8" id="uvp-4v-Q12"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -42,6 +54,7 @@
             </constraints>
             <connections>
                 <outlet property="imageView" destination="QX2-jM-yMO" id="eoK-Ht-JHJ"/>
+                <outlet property="roundAndShadeView" destination="zyf-0n-bcM" id="AfC-zT-MDQ"/>
             </connections>
             <point key="canvasLocation" x="-18" y="-1"/>
         </collectionViewCell>

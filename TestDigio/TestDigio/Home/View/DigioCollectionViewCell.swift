@@ -17,6 +17,7 @@ class DigioCollectionViewCell: UICollectionViewCell {
     private var tapHandler: TapImageHandling?
     
     @IBOutlet weak private var imageView: UIImageView!
+    @IBOutlet weak private var roundAndShadeView: UIView!
     
     func updateURL(_ url: String) {
         imageView.sd_setImage(with: URL(string: url))
@@ -24,6 +25,23 @@ class DigioCollectionViewCell: UICollectionViewCell {
             let tap = UITapGestureRecognizer(target: self, action: #selector(tapOnImageAction))
             imageView.addGestureRecognizer(tap)
         }
+        
+        imageView.layer.masksToBounds = false
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
+        
+        setShadows(on: roundAndShadeView)
+    }
+    
+    private func setShadows(on view: UIView) {
+        view.layer.cornerRadius = 10
+        view.layer.masksToBounds = true
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.masksToBounds = false
+        view.clipsToBounds = false
+        view.layer.shadowOpacity = 0.3
+        view.layer.shadowOffset = CGSize(width: -1, height: 1)
+        view.layer.shadowRadius = 5
     }
     
     func setModel(_ model: Codable) {
