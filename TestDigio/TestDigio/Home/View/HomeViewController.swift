@@ -5,6 +5,7 @@
 //  Created by Pedro Brandão on 11/10/24.
 //
 
+import Combine
 import UIKit
 
 class HomeViewController: UIViewController {
@@ -14,10 +15,8 @@ class HomeViewController: UIViewController {
     }()
     
     private let spotLightDelegate: SpotLightCollectionDelegating = SpotLightCollectionDelegate()
-    
-    private lazy var productsDelegate: ProductsCollectionDelegating = {
-        ProductsCollectionDelegate()
-    }()
+    private let productsDelegate: ProductsCollectionDelegating = ProductsCollectionDelegate()
+    private var cancellables: [AnyCancellable] = []
     
     @IBOutlet private weak var spotLightCollectionView: UICollectionView!
     @IBOutlet private weak var cashImageView: UIImageView!
@@ -35,7 +34,13 @@ class HomeViewController: UIViewController {
         }
     }
     
-    lazy var datasource: UICollectionViewDiffableDataSource<Int, TestDigioModel> = { self.configuredDataSource() }()
+    private lazy var spotLightDatasource: UICollectionViewDiffableDataSource<Int, TestDigioModel> = {
+        self.configuredDataSource()
+    }()
+    
+    private lazy var productsDataSource: UICollectionViewDiffableDataSource<Int, TestDigioModel> = {
+        self.configuredDataSource()
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,19 +52,34 @@ class HomeViewController: UIViewController {
     private func setupUI() {
         spotLightCollectionView.delegate = spotLightDelegate
         productsCollectionView.delegate = productsDelegate
+        
+        viewModel.newSpotLightDataSub
+            .sink {
+                self.update(dataSource: self.spotLightDatasource, with: $0)
+            }
+            .store(in: &cancellables)
+        
+        viewModel.newProductsDataSub
+            .sink { self.update(dataSource: self.spotLightDatasource, with: $0)
+            }
+            .store(in: &cancellables)
+        
+        viewModel.newCashDataSub
+            .sink { self.cashImageView.sd_setImage(with: URL(string: $0.url))
+            }
+            .store(in: &cancellables)
+    }
+    
+    // Nova maneira de atualizar dados
+    private func update(dataSource: UICollectionViewDiffableDataSource<Int, TestDigioModel>, with list: [TestDigioModel]) {
+        guard !list.isEmpty else { return }
+        var snap = NSDiffableDataSourceSnapshot<Int, TestDigioModel>()
+        snap.appendSections([0])
+        snap.appendItems(list)
+        dataSource.apply(snap, animatingDifferences: true)
     }
     
     private func setupInitialData() {
-        var snap = NSDiffableDataSourceSnapshot<Int, TestDigioModel>()
-        //        Nova maneira de atualizar dados
-        //        snap.appendSections(["pepboys"])
-        //        let pep = ["manny","moe","jack"]
-        //        snap.appendItems(pep)
-        snap.appendSections([0])
-        let m1 = TestDigioModel(url: "https://s3-sa-east-1.amazonaws.com/digio-exame/recharge_banner.png")
-        let m2 = TestDigioModel(url: "https://s3-sa-east-1.amazonaws.com/digio-exame/uber_banner.png")
-        snap.appendItems([m1, m2])
-        
-        self.datasource.apply(snap, animatingDifferences: false)
+        update(dataSource: spotLightDatasource, with: [])
     }
 }
