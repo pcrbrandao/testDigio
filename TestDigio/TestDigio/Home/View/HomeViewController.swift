@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var productsCollectionView: UICollectionView!
     
     @IBAction func cashImageTapAction(_ sender: Any) {
-        print("tap on image")
+        viewModel.handleTapOnCash()
     }
     
     private func configuredSpotLightDataSource() -> UICollectionViewDiffableDataSource<Int, SpotLightModel> {

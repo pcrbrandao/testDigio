@@ -40,7 +40,7 @@ extension HomeCoordinator: HomeCoordinating {
     }
     
     func goToCashDetail() {
-        
+        print("cash tap")
     }
 }
 

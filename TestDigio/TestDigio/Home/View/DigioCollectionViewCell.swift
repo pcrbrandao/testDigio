@@ -20,6 +20,10 @@ class DigioCollectionViewCell: UICollectionViewCell {
     
     func updateURL(_ url: String) {
         imageView.sd_setImage(with: URL(string: url))
+        if imageView.gestureRecognizers?.isEmpty ?? true {
+            let tap = UITapGestureRecognizer(target: self, action: #selector(tapOnImageAction))
+            imageView.addGestureRecognizer(tap)
+        }
     }
     
     func setModel(_ model: Codable) {
@@ -28,5 +32,9 @@ class DigioCollectionViewCell: UICollectionViewCell {
     
     func setTapHandler(_ handler: TapImageHandling?) {
         self.tapHandler = handler
+    }
+    
+    @objc private func tapOnImageAction() {
+        tapHandler?.handleTapOnModel(model)
     }
 }
