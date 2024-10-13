@@ -67,4 +67,38 @@ struct DetailModel {
     let title: String
     let url: String
     let decription: String
+    
+    init(title: String, url: String, decription: String) {
+        self.title = title
+        self.url = url
+        self.decription = decription
+    }
+    
+    init(with model: SpotLightModel) {
+        self.init(title: model.name, url: model.bannerURL, decription: model.description)
+    }
+    
+    init(with model: ProductModel) {
+        self.init(title: model.name, url: model.imageURL, decription: model.description)
+    }
+    
+    init(with model: CashModel) {
+        self.init(title: model.title, url: model.bannerURL, decription: model.description)
+    }
+    
+    init(with codable: Codable) {
+        if let model = codable as? SpotLightModel {
+            self.init(with: model)
+            return
+        }
+        if let model = codable as? ProductModel {
+            self.init(with: model)
+            return
+        }
+        if let model = codable as? CashModel {
+            self.init(with: model)
+            return
+        }
+        self.init(title: "", url: "", decription: "")
+    }
 }

@@ -49,17 +49,9 @@ extension HomeCoordinator: HomeCoordinating {
     }
     
     func prepareToSegue(with destination: any Navigatable) {
-        guard let viewController = destination as? DetailViewProtocol else {
+        guard let model = selectedModel, let viewController = destination as? DetailViewProtocol else {
             return
         }
-        if let model = selectedModel as? SpotLightModel {
-            viewController.model = DetailModel(title: model.name, url: model.bannerURL, decription: model.description)
-        }
-        if let model = selectedModel as? ProductModel {
-            viewController.model = DetailModel(title: model.name, url: model.imageURL, decription: model.description)
-        }
-        if let model = selectedModel as? CashModel {
-            viewController.model = DetailModel(title: model.title, url: model.bannerURL, decription: model.description)
-        }
+        viewController.model = DetailModel(with: model)
     }
 }
