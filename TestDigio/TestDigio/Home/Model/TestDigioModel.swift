@@ -7,26 +7,48 @@
 
 import Foundation
 
-protocol TestDigioModelProtocol: Codable {
-    var url: String { get set }
+struct TestDigioModel: Codable {
+    let spotlight: [SpotLightModel]
+    let products: [ProductModel]
+    let cash: CashModel
 }
 
-class TestDigioModel: Codable {
-    var serialNumber: String
-    var url: String
-    
-    init(url: String, serial: String = "") {
-        self.url = url
-        self.serialNumber = serial
-    }
+struct SpotLightModel: Codable {
+    let serialNumber: String?
+    let name: String
+    let bannerURL: String
+    let description: String
 }
 
-extension TestDigioModel: Hashable {
-    static func == (lhs: TestDigioModel, rhs: TestDigioModel) -> Bool {
-        lhs.url == rhs.url
+extension SpotLightModel: Hashable {
+    static func == (lhs: SpotLightModel, rhs: SpotLightModel) -> Bool {
+        lhs.bannerURL == rhs.bannerURL
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(serialNumber)
     }
+}
+
+struct ProductModel: Codable {
+    let serialNumber: String?
+    let name: String
+    let imageURL: String
+    let description: String
+}
+
+extension ProductModel: Hashable {
+    static func == (lhs: ProductModel, rhs: ProductModel) -> Bool {
+        lhs.imageURL == rhs.imageURL
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(serialNumber)
+    }
+}
+
+struct CashModel: Codable {
+    let title: String
+    let bannerURL: String
+    let description: String
 }

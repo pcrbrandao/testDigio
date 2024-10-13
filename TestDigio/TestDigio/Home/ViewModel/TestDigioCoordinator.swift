@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TestDigioDataProtocol: AnyObject {
-    var data: TestDigioModelProtocol? { get set }
+    var data: TestDigioModel? { get set }
 }
 
 protocol TestDigioCoordinating: AnyObject {
@@ -16,11 +16,11 @@ protocol TestDigioCoordinating: AnyObject {
 }
 
 class TestDigioCoordinator {
-    var data: TestDigioModelProtocol?
+    var data: TestDigioModel?
     
     let navigator: Navigating
     
-    init(data: TestDigioModelProtocol? = nil, navigator: Navigating) {
+    init(data: TestDigioModel? = nil, navigator: Navigating) {
         self.data = data
         self.navigator = navigator
     }

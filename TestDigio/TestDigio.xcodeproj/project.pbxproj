@@ -21,6 +21,7 @@
 		00D3885A2CBACEBF0002390A /* UINavigationController+TestDigio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */; };
 		00D3885C2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D3885B2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift */; };
 		00D3885E2CBB08E60002390A /* ProductsCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D3885D2CBB08E60002390A /* ProductsCollectionDelegate.swift */; };
+		00FCF18A2CBB674B00AF2F9B /* TestDigioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCF1892CBB674B00AF2F9B /* TestDigioService.swift */; };
 		58F580041C4740C92EAC776E /* Pods_TestDigio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0424D0089E6E7334DD2195F /* Pods_TestDigio.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		00E4391B2CB9C3C500670FC5 /* TestDigio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDigio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E439312CB9C3C700670FC5 /* TestDigioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E4393B2CB9C3C700670FC5 /* TestDigioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00FCF1892CBB674B00AF2F9B /* TestDigioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDigioService.swift; sourceTree = "<group>"; };
 		0606503E896C0A839581DC1D /* Pods-TestDigio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.release.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.release.xcconfig"; sourceTree = "<group>"; };
 		5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.debug.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.debug.xcconfig"; sourceTree = "<group>"; };
 		D0424D0089E6E7334DD2195F /* Pods_TestDigio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDigio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 				0036B8692CBB1A10009AA591 /* Model */,
 				00D388542CBACA690002390A /* View */,
 				00D388562CBACAAE0002390A /* ViewModel */,
+				00FCF1892CBB674B00AF2F9B /* TestDigioService.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				003BE3762CBAA79200473934 /* HomeViewController.swift in Sources */,
 				00D388582CBACAD70002390A /* HomeViewModel.swift in Sources */,
 				00D3885C2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift in Sources */,
+				00FCF18A2CBB674B00AF2F9B /* TestDigioService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

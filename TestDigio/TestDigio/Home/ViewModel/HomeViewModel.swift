@@ -8,42 +8,46 @@
 import Combine
 import Foundation
 
-protocol HomeViewModelProtocol: SpotLightDataGetting {
+protocol HomeViewModelProtocol: AnyObject {
     func handleViewDidLoad()
     
-    var newSpotLightDataSub: PassthroughSubject<[TestDigioModel], Never> { get }
-    var newProductsDataSub: PassthroughSubject<[TestDigioModel], Never> { get }
-    var newCashDataSub: PassthroughSubject<TestDigioModel, Never> { get }
+    var newSpotLightDataSub: PassthroughSubject<[SpotLightModel], Never> { get }
+    var newProductsDataSub: PassthroughSubject<[ProductModel], Never> { get }
+    var newCashDataSub: PassthroughSubject<CashModel, Never> { get }
 }
 
 class HomeViewModel {
-    var newSpotLightDataSub = PassthroughSubject<[TestDigioModel], Never>()
-    var newProductsDataSub = PassthroughSubject<[TestDigioModel], Never>()
-    var newCashDataSub = PassthroughSubject<TestDigioModel, Never>()
+    var newSpotLightDataSub = PassthroughSubject<[SpotLightModel], Never>()
+    var newProductsDataSub = PassthroughSubject<[ProductModel], Never>()
+    var newCashDataSub = PassthroughSubject<CashModel, Never>()
     
     private var navigation: Navigating?
+    private var service: TestDigioServiceProtocol?
+    private var cancellables: [AnyCancellable] = []
     
-    init(navigation: Navigating?) {
+    init(navigation: Navigating?, service: TestDigioServiceProtocol? = TestDigioService()) {
         self.navigation = navigation
+        self.service = service
     }
 }
 
 extension HomeViewModel: HomeViewModelProtocol {
     
     func handleViewDidLoad() {
-        // TODO: implement
-        let m1 = TestDigioModel(url: "https://s3-sa-east-1.amazonaws.com/digio-exame/recharge_banner.png")
-        let m2 = TestDigioModel(url: "https://s3-sa-east-1.amazonaws.com/digio-exame/uber_banner.png")
-        newSpotLightDataSub.send([m1, m2])
-    }
-}
-
-extension HomeViewModel: SpotLightDataGetting {
-    func numberOfItemsInSection(_ section: Int) -> Int {
-        1
-    }
-    
-    func urlImageAt(indexPath: IndexPath) -> String {
-        ""
+        service?.fechData()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("received data done")
+                case .failure(let error):
+                    print("error feching data: \(error)")
+                }
+            }, receiveValue: { model in
+                self.newSpotLightDataSub.send(model.spotlight)
+                self.newCashDataSub.send(model.cash)
+                self.newProductsDataSub.send(model.products)
+            })
+            .store(in: &cancellables)
     }
 }
