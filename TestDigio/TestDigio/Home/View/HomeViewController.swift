@@ -91,6 +91,8 @@ class HomeViewController: UIViewController {
             .sink { self.update(dataSource: self.productsDataSource, with: $0)
             }
             .store(in: &cancellables)
+        
+        cashImageView.round()
     }
     
     // Nova maneira de atualizar dados

@@ -116,13 +116,25 @@
                                                                         </attributedString>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQv-0o-8x3">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1T-vk-82K">
                                                                         <rect key="frame" x="0.0" y="40" width="361" height="110"/>
-                                                                        <gestureRecognizers/>
-                                                                        <connections>
-                                                                            <outletCollection property="gestureRecognizers" destination="KVj-An-Rxj" appends="YES" id="tez-kU-9v7"/>
-                                                                        </connections>
-                                                                    </imageView>
+                                                                        <subviews>
+                                                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQv-0o-8x3">
+                                                                                <rect key="frame" x="0.0" y="10" width="361" height="90"/>
+                                                                                <gestureRecognizers/>
+                                                                                <connections>
+                                                                                    <outletCollection property="gestureRecognizers" destination="KVj-An-Rxj" appends="YES" id="tez-kU-9v7"/>
+                                                                                </connections>
+                                                                            </imageView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="bottom" secondItem="JQv-0o-8x3" secondAttribute="bottom" constant="10" id="Cta-95-XOs"/>
+                                                                            <constraint firstItem="JQv-0o-8x3" firstAttribute="leading" secondItem="c1T-vk-82K" secondAttribute="leading" id="MAL-p2-gmP"/>
+                                                                            <constraint firstItem="JQv-0o-8x3" firstAttribute="top" secondItem="c1T-vk-82K" secondAttribute="top" constant="10" id="O2Z-O4-BnX"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="JQv-0o-8x3" secondAttribute="trailing" id="m3j-2X-x4U"/>
+                                                                        </constraints>
+                                                                    </view>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>

@@ -22,7 +22,7 @@
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyf-0n-bcM">
                                 <rect key="frame" x="8" y="8" width="104" height="104"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-jM-yMO">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QX2-jM-yMO">
                                         <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
                                         <gestureRecognizers/>
                                     </imageView>
