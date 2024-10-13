@@ -7,13 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0036B86C2CBB1A90009AA591 /* TestDigioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036B86B2CBB1A90009AA591 /* TestDigioModel.swift */; };
+		0036B86E2CBB1B02009AA591 /* TestDigioCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036B86D2CBB1B02009AA591 /* TestDigioCoordinator.swift */; };
+		0036B8712CBB3F0E009AA591 /* DigioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0036B86F2CBB3F0E009AA591 /* DigioCollectionViewCell.swift */; };
+		0036B8722CBB3F0E009AA591 /* DigioCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0036B8702CBB3F0E009AA591 /* DigioCollectionViewCell.xib */; };
 		003BE3702CBAA79200473934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 003BE3672CBAA79200473934 /* Assets.xcassets */; };
 		003BE3722CBAA79200473934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003BE36A2CBAA79200473934 /* LaunchScreen.storyboard */; };
 		003BE3732CBAA79200473934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 003BE36C2CBAA79200473934 /* Main.storyboard */; };
 		003BE3742CBAA79200473934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE3662CBAA79200473934 /* AppDelegate.swift */; };
 		003BE3752CBAA79200473934 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE36D2CBAA79200473934 /* SceneDelegate.swift */; };
-		003BE3762CBAA79200473934 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE36E2CBAA79200473934 /* ViewController.swift */; };
-		F7C885254C7BE333F514DB6B /* libPods-TestDigio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D34D5344354123391A64B0EE /* libPods-TestDigio.a */; };
+		003BE3762CBAA79200473934 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE36E2CBAA79200473934 /* HomeViewController.swift */; };
+		00D388582CBACAD70002390A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D388572CBACAD70002390A /* HomeViewModel.swift */; };
+		00D3885A2CBACEBF0002390A /* UINavigationController+TestDigio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */; };
+		00D3885C2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D3885B2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift */; };
+		00D3885E2CBB08E60002390A /* ProductsCollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D3885D2CBB08E60002390A /* ProductsCollectionDelegate.swift */; };
+		58F580041C4740C92EAC776E /* Pods_TestDigio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0424D0089E6E7334DD2195F /* Pods_TestDigio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +42,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0036B86B2CBB1A90009AA591 /* TestDigioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDigioModel.swift; sourceTree = "<group>"; };
+		0036B86D2CBB1B02009AA591 /* TestDigioCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDigioCoordinator.swift; sourceTree = "<group>"; };
+		0036B86F2CBB3F0E009AA591 /* DigioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigioCollectionViewCell.swift; sourceTree = "<group>"; };
+		0036B8702CBB3F0E009AA591 /* DigioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DigioCollectionViewCell.xib; sourceTree = "<group>"; };
 		003BE3662CBAA79200473934 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		003BE3672CBAA79200473934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		003BE3682CBAA79200473934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		003BE3692CBAA79200473934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		003BE36B2CBAA79200473934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003BE36D2CBAA79200473934 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		003BE36E2CBAA79200473934 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		003BE36E2CBAA79200473934 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		00D388572CBACAD70002390A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TestDigio.swift"; sourceTree = "<group>"; };
+		00D3885B2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotLightCollectionDelegate.swift; sourceTree = "<group>"; };
+		00D3885D2CBB08E60002390A /* ProductsCollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionDelegate.swift; sourceTree = "<group>"; };
 		00E4391B2CB9C3C500670FC5 /* TestDigio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDigio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E439312CB9C3C700670FC5 /* TestDigioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E4393B2CB9C3C700670FC5 /* TestDigioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0606503E896C0A839581DC1D /* Pods-TestDigio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.release.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.release.xcconfig"; sourceTree = "<group>"; };
 		5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.debug.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.debug.xcconfig"; sourceTree = "<group>"; };
-		D34D5344354123391A64B0EE /* libPods-TestDigio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestDigio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0424D0089E6E7334DD2195F /* Pods_TestDigio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDigio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7C885254C7BE333F514DB6B /* libPods-TestDigio.a in Frameworks */,
+				58F580041C4740C92EAC776E /* Pods_TestDigio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,18 +91,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0036B8692CBB1A10009AA591 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0036B86B2CBB1A90009AA591 /* TestDigioModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0036B86A2CBB1A2A009AA591 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0036B8692CBB1A10009AA591 /* Model */,
+				00D388542CBACA690002390A /* View */,
+				00D388562CBACAAE0002390A /* ViewModel */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		003BE36F2CBAA79200473934 /* TestDigio */ = {
 			isa = PBXGroup;
 			children = (
-				003BE3662CBAA79200473934 /* AppDelegate.swift */,
-				003BE3672CBAA79200473934 /* Assets.xcassets */,
 				003BE3682CBAA79200473934 /* Info.plist */,
-				003BE36A2CBAA79200473934 /* LaunchScreen.storyboard */,
-				003BE36C2CBAA79200473934 /* Main.storyboard */,
-				003BE36D2CBAA79200473934 /* SceneDelegate.swift */,
-				003BE36E2CBAA79200473934 /* ViewController.swift */,
+				00D388552CBACA910002390A /* Configs */,
+				003BE3672CBAA79200473934 /* Assets.xcassets */,
+				0036B86A2CBB1A2A009AA591 /* Home */,
 			);
 			path = TestDigio;
+			sourceTree = "<group>";
+		};
+		00D388542CBACA690002390A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				003BE36C2CBAA79200473934 /* Main.storyboard */,
+				003BE36A2CBAA79200473934 /* LaunchScreen.storyboard */,
+				003BE36E2CBAA79200473934 /* HomeViewController.swift */,
+				00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */,
+				00D3885B2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift */,
+				00D3885D2CBB08E60002390A /* ProductsCollectionDelegate.swift */,
+				0036B86F2CBB3F0E009AA591 /* DigioCollectionViewCell.swift */,
+				0036B8702CBB3F0E009AA591 /* DigioCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00D388552CBACA910002390A /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				003BE3662CBAA79200473934 /* AppDelegate.swift */,
+				003BE36D2CBAA79200473934 /* SceneDelegate.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		00D388562CBACAAE0002390A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				00D388572CBACAD70002390A /* HomeViewModel.swift */,
+				0036B86D2CBB1B02009AA591 /* TestDigioCoordinator.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		00E439122CB9C3C400670FC5 = {
@@ -115,14 +179,13 @@
 				5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */,
 				0606503E896C0A839581DC1D /* Pods-TestDigio.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		4A8EEC4954BE58EE5C68EA15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D34D5344354123391A64B0EE /* libPods-TestDigio.a */,
+				D0424D0089E6E7334DD2195F /* Pods_TestDigio.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,7 +202,7 @@
 				00E439182CB9C3C400670FC5 /* Frameworks */,
 				00E439192CB9C3C400670FC5 /* Resources */,
 				005616402CB9CE3B00DF8144 /* ShellScript */,
-				9C6679315C8014391FFDC48A /* [CP] Copy Pods Resources */,
+				2EB727574BE13D5DB8E8C251 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,6 +273,7 @@
 				};
 			};
 			buildConfigurationList = 00E439162CB9C3C400670FC5 /* Build configuration list for PBXProject "TestDigio" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -236,6 +300,7 @@
 				003BE3702CBAA79200473934 /* Assets.xcassets in Resources */,
 				003BE3722CBAA79200473934 /* LaunchScreen.storyboard in Resources */,
 				003BE3732CBAA79200473934 /* Main.storyboard in Resources */,
+				0036B8722CBB3F0E009AA591 /* DigioCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,21 +340,21 @@
 			shellScript = "if which swiftlint > /dev/null; then\n  echo \"there is a lint\"\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9C6679315C8014391FFDC48A /* [CP] Copy Pods Resources */ = {
+		2EB727574BE13D5DB8E8C251 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestDigio/Pods-TestDigio-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2C08C554D15FF0249821AC6 /* [CP] Check Pods Manifest.lock */ = {
@@ -321,9 +386,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D3885A2CBACEBF0002390A /* UINavigationController+TestDigio.swift in Sources */,
 				003BE3742CBAA79200473934 /* AppDelegate.swift in Sources */,
+				0036B86C2CBB1A90009AA591 /* TestDigioModel.swift in Sources */,
+				0036B8712CBB3F0E009AA591 /* DigioCollectionViewCell.swift in Sources */,
+				00D3885E2CBB08E60002390A /* ProductsCollectionDelegate.swift in Sources */,
+				0036B86E2CBB1B02009AA591 /* TestDigioCoordinator.swift in Sources */,
 				003BE3752CBAA79200473934 /* SceneDelegate.swift in Sources */,
-				003BE3762CBAA79200473934 /* ViewController.swift in Sources */,
+				003BE3762CBAA79200473934 /* HomeViewController.swift in Sources */,
+				00D388582CBACAD70002390A /* HomeViewModel.swift in Sources */,
+				00D3885C2CBAD1EB0002390A /* SpotLightCollectionDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
