@@ -21,6 +21,10 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var cashImageView: UIImageView!
     @IBOutlet private weak var productsCollectionView: UICollectionView!
     
+    @IBAction func cashImageTapAction(_ sender: Any) {
+        print("tap on image")
+    }
+    
     private func configuredSpotLightDataSource() -> UICollectionViewDiffableDataSource<Int, SpotLightModel> {
         let nib = UINib(nibName: "DigioCollectionViewCell", bundle: nil)
         let cellReg = UICollectionView.CellRegistration<DigioCollectionViewCell, SpotLightModel>(
