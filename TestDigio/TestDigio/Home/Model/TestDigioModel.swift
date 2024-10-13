@@ -11,6 +11,16 @@ struct TestDigioModel: Codable {
     let spotlight: [SpotLightModel]
     let products: [ProductModel]
     let cash: CashModel
+    
+    static func parse(_ data: Data) -> TestDigioModel? {
+        do {
+            let model = try JSONDecoder().decode(TestDigioModel.self, from: data)
+            return model
+        } catch {
+            print("Decode error: \(error)")
+            return nil
+        }
+    }
 }
 
 struct SpotLightModel: Codable {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,14 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		00E439322CB9C3C700670FC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 00E439132CB9C3C400670FC5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 00E4391A2CB9C3C400670FC5;
-			remoteInfo = TestDigio;
-		};
-		00E4393C2CB9C3C700670FC5 /* PBXContainerItemProxy */ = {
+		00A197E82CBC0BBE000EC5FC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 00E439132CB9C3C400670FC5 /* Project object */;
 			proxyType = 1;
@@ -54,37 +47,33 @@
 		003BE36D2CBAA79200473934 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		003BE36E2CBAA79200473934 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		00A01C312CBBFF8D00FC2D8A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		00A197E42CBC0BBE000EC5FC /* TestDigioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00D388572CBACAD70002390A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TestDigio.swift"; sourceTree = "<group>"; };
 		00E4391B2CB9C3C500670FC5 /* TestDigio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDigio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E439312CB9C3C700670FC5 /* TestDigioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E4393B2CB9C3C700670FC5 /* TestDigioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDigioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00FCF1892CBB674B00AF2F9B /* TestDigioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDigioService.swift; sourceTree = "<group>"; };
 		0606503E896C0A839581DC1D /* Pods-TestDigio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.release.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.release.xcconfig"; sourceTree = "<group>"; };
 		5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDigio.debug.xcconfig"; path = "Target Support Files/Pods-TestDigio/Pods-TestDigio.debug.xcconfig"; sourceTree = "<group>"; };
 		D0424D0089E6E7334DD2195F /* Pods_TestDigio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDigio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		00A197E52CBC0BBE000EC5FC /* TestDigioTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = TestDigioTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		00A197E12CBC0BBE000EC5FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00E439182CB9C3C400670FC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				58F580041C4740C92EAC776E /* Pods_TestDigio.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00E4392E2CB9C3C700670FC5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00E439382CB9C3C700670FC5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +94,7 @@
 				0036B8692CBB1A10009AA591 /* Model */,
 				00D388542CBACA690002390A /* View */,
 				00D388562CBACAAE0002390A /* ViewModel */,
-				00FCF1892CBB674B00AF2F9B /* TestDigioService.swift */,
+				00A197ED2CBC0C19000EC5FC /* Service */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -119,6 +108,14 @@
 				0036B86A2CBB1A2A009AA591 /* Home */,
 			);
 			path = TestDigio;
+			sourceTree = "<group>";
+		};
+		00A197ED2CBC0C19000EC5FC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				00FCF1892CBB674B00AF2F9B /* TestDigioService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		00D388542CBACA690002390A /* View */ = {
@@ -157,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				003BE36F2CBAA79200473934 /* TestDigio */,
+				00A197E52CBC0BBE000EC5FC /* TestDigioTests */,
 				00E4391C2CB9C3C500670FC5 /* Products */,
 				2FD9CE02D579C563B55BFAB7 /* Pods */,
 				4A8EEC4954BE58EE5C68EA15 /* Frameworks */,
@@ -167,8 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				00E4391B2CB9C3C500670FC5 /* TestDigio.app */,
-				00E439312CB9C3C700670FC5 /* TestDigioTests.xctest */,
-				00E4393B2CB9C3C700670FC5 /* TestDigioUITests.xctest */,
+				00A197E42CBC0BBE000EC5FC /* TestDigioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +190,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		00A197E32CBC0BBE000EC5FC /* TestDigioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00A197EA2CBC0BBE000EC5FC /* Build configuration list for PBXNativeTarget "TestDigioTests" */;
+			buildPhases = (
+				00A197E02CBC0BBE000EC5FC /* Sources */,
+				00A197E12CBC0BBE000EC5FC /* Frameworks */,
+				00A197E22CBC0BBE000EC5FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00A197E92CBC0BBE000EC5FC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				00A197E52CBC0BBE000EC5FC /* TestDigioTests */,
+			);
+			name = TestDigioTests;
+			packageProductDependencies = (
+			);
+			productName = TestDigioTests;
+			productReference = 00A197E42CBC0BBE000EC5FC /* TestDigioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		00E4391A2CB9C3C400670FC5 /* TestDigio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E439442CB9C3C700670FC5 /* Build configuration list for PBXNativeTarget "TestDigio" */;
@@ -213,42 +233,6 @@
 			productReference = 00E4391B2CB9C3C500670FC5 /* TestDigio.app */;
 			productType = "com.apple.product-type.application";
 		};
-		00E439302CB9C3C700670FC5 /* TestDigioTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E439492CB9C3C700670FC5 /* Build configuration list for PBXNativeTarget "TestDigioTests" */;
-			buildPhases = (
-				00E4392D2CB9C3C700670FC5 /* Sources */,
-				00E4392E2CB9C3C700670FC5 /* Frameworks */,
-				00E4392F2CB9C3C700670FC5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E439332CB9C3C700670FC5 /* PBXTargetDependency */,
-			);
-			name = TestDigioTests;
-			productName = TestDigioTests;
-			productReference = 00E439312CB9C3C700670FC5 /* TestDigioTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		00E4393A2CB9C3C700670FC5 /* TestDigioUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 00E4394C2CB9C3C700670FC5 /* Build configuration list for PBXNativeTarget "TestDigioUITests" */;
-			buildPhases = (
-				00E439372CB9C3C700670FC5 /* Sources */,
-				00E439382CB9C3C700670FC5 /* Frameworks */,
-				00E439392CB9C3C700670FC5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				00E4393D2CB9C3C700670FC5 /* PBXTargetDependency */,
-			);
-			name = TestDigioUITests;
-			productName = TestDigioUITests;
-			productReference = 00E4393B2CB9C3C700670FC5 /* TestDigioUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -259,16 +243,12 @@
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					00A197E32CBC0BBE000EC5FC = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 00E4391A2CB9C3C400670FC5;
+					};
 					00E4391A2CB9C3C400670FC5 = {
 						CreatedOnToolsVersion = 16.0;
-					};
-					00E439302CB9C3C700670FC5 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 00E4391A2CB9C3C400670FC5;
-					};
-					00E4393A2CB9C3C700670FC5 = {
-						CreatedOnToolsVersion = 16.0;
-						TestTargetID = 00E4391A2CB9C3C400670FC5;
 					};
 				};
 			};
@@ -286,13 +266,19 @@
 			projectRoot = "";
 			targets = (
 				00E4391A2CB9C3C400670FC5 /* TestDigio */,
-				00E439302CB9C3C700670FC5 /* TestDigioTests */,
-				00E4393A2CB9C3C700670FC5 /* TestDigioUITests */,
+				00A197E32CBC0BBE000EC5FC /* TestDigioTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		00A197E22CBC0BBE000EC5FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00E439192CB9C3C400670FC5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,20 +287,6 @@
 				003BE3722CBAA79200473934 /* LaunchScreen.storyboard in Resources */,
 				003BE3732CBAA79200473934 /* Main.storyboard in Resources */,
 				0036B8722CBB3F0E009AA591 /* DigioCollectionViewCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00E4392F2CB9C3C700670FC5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00E439392CB9C3C700670FC5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +354,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		00A197E02CBC0BBE000EC5FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		00E439172CB9C3C400670FC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,32 +378,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		00E4392D2CB9C3C700670FC5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		00E439372CB9C3C700670FC5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		00E439332CB9C3C700670FC5 /* PBXTargetDependency */ = {
+		00A197E92CBC0BBE000EC5FC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 00E4391A2CB9C3C400670FC5 /* TestDigio */;
-			targetProxy = 00E439322CB9C3C700670FC5 /* PBXContainerItemProxy */;
-		};
-		00E4393D2CB9C3C700670FC5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 00E4391A2CB9C3C400670FC5 /* TestDigio */;
-			targetProxy = 00E4393C2CB9C3C700670FC5 /* PBXContainerItemProxy */;
+			targetProxy = 00A197E82CBC0BBE000EC5FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -448,6 +408,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		00A197EB2CBC0BBE000EC5FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.pcrbrandao.TestDigioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestDigio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestDigio";
+			};
+			name = Debug;
+		};
+		00A197EC2CBC0BBE000EC5FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.pcrbrandao.TestDigioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestDigio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestDigio";
+			};
+			name = Release;
+		};
 		00E439452CB9C3C700670FC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B81980623C1978E3C09E7DA /* Pods-TestDigio.debug.xcconfig */;
@@ -623,77 +618,18 @@
 			};
 			name = Release;
 		};
-		00E4394A2CB9C3C700670FC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.pcrbrandao.TestDigioTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestDigio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestDigio";
-			};
-			name = Debug;
-		};
-		00E4394B2CB9C3C700670FC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.pcrbrandao.TestDigioTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestDigio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestDigio";
-			};
-			name = Release;
-		};
-		00E4394D2CB9C3C700670FC5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.pcrbrandao.TestDigioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestDigio;
-			};
-			name = Debug;
-		};
-		00E4394E2CB9C3C700670FC5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.pcrbrandao.TestDigioUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TestDigio;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		00A197EA2CBC0BBE000EC5FC /* Build configuration list for PBXNativeTarget "TestDigioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00A197EB2CBC0BBE000EC5FC /* Debug */,
+				00A197EC2CBC0BBE000EC5FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		00E439162CB9C3C400670FC5 /* Build configuration list for PBXProject "TestDigio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -708,24 +644,6 @@
 			buildConfigurations = (
 				00E439452CB9C3C700670FC5 /* Debug */,
 				00E439462CB9C3C700670FC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00E439492CB9C3C700670FC5 /* Build configuration list for PBXNativeTarget "TestDigioTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E4394A2CB9C3C700670FC5 /* Debug */,
-				00E4394B2CB9C3C700670FC5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		00E4394C2CB9C3C700670FC5 /* Build configuration list for PBXNativeTarget "TestDigioUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				00E4394D2CB9C3C700670FC5 /* Debug */,
-				00E4394E2CB9C3C700670FC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

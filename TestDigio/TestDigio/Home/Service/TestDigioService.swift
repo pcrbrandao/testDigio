@@ -25,7 +25,7 @@ class TestDigioService: TestDigioServiceProtocol {
                     promise(Result.failure(error))
                     return
                 }
-                if let data = data, let model = self.parse(data) {
+                if let data = data, let model = TestDigioModel.parse(data) {
                     promise(.success(model))
                     return
                 }
@@ -35,15 +35,5 @@ class TestDigioService: TestDigioServiceProtocol {
             task.resume()
         }
         .eraseToAnyPublisher()
-    }
-    
-    private func parse(_ data: Data) -> TestDigioModel? {
-        do {
-            let model = try JSONDecoder().decode(TestDigioModel.self, from: data)
-            return model
-        } catch {
-            print("Decode error: \(error)")
-            return nil
-        }
     }
 }
