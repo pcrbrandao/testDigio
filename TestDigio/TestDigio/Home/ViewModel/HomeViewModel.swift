@@ -8,8 +8,9 @@
 import Combine
 import Foundation
 
-protocol HomeViewModelProtocol: AnyObject {
+protocol HomeViewModelProtocol: TapImageHandling {
     func handleViewDidLoad()
+    func handleTapOnCash()
     
     var newSpotLightDataSub: PassthroughSubject<[SpotLightModel], Never> { get }
     var newProductsDataSub: PassthroughSubject<[ProductModel], Never> { get }
@@ -21,12 +22,12 @@ class HomeViewModel {
     var newProductsDataSub = PassthroughSubject<[ProductModel], Never>()
     var newCashDataSub = PassthroughSubject<CashModel, Never>()
     
-    private var navigation: Navigating?
     private var service: TestDigioServiceProtocol?
     private var cancellables: [AnyCancellable] = []
+    private var coordinator: HomeCoordinating?
     
-    init(navigation: Navigating?, service: TestDigioServiceProtocol? = TestDigioService()) {
-        self.navigation = navigation
+    init(coordinator: HomeCoordinating?, service: TestDigioServiceProtocol? = TestDigioService()) {
+        self.coordinator = coordinator
         self.service = service
     }
 }
@@ -49,5 +50,13 @@ extension HomeViewModel: HomeViewModelProtocol {
                 self.newProductsDataSub.send(model.products)
             })
             .store(in: &cancellables)
+    }
+    
+    func handleTapOnCash() {
+        coordinator?.goToCashDetail()
+    }
+    
+    func handleTapOnModel(_ model: (any Codable)?) {
+        coordinator?.goToDetail(from: model)
     }
 }

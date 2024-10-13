@@ -11,22 +11,27 @@ import UIKit
 class HomeViewController: UIViewController {
     
     private lazy var viewModel: HomeViewModelProtocol = {
-        HomeViewModel(navigation: self.navigationController)
+        let coord = HomeCoordinator(navigator: self.navigationController ?? UINavigationController())
+        return HomeViewModel(coordinator: coord)
     }()
     
-    private let spotLightDelegate: SpotLightCollectionDelegating = SpotLightCollectionDelegate()
-    private let productsDelegate: ProductsCollectionDelegating = ProductsCollectionDelegate()
     private var cancellables: [AnyCancellable] = []
     
     @IBOutlet private weak var spotLightCollectionView: UICollectionView!
     @IBOutlet private weak var cashImageView: UIImageView!
     @IBOutlet private weak var productsCollectionView: UICollectionView!
     
+    @IBAction func tapOnCashAction(_ sender: Any) {
+        viewModel.handleTapOnCash()
+    }
+    
     private func configuredSpotLightDataSource() -> UICollectionViewDiffableDataSource<Int, SpotLightModel> {
         let nib = UINib(nibName: "DigioCollectionViewCell", bundle: nil)
         let cellReg = UICollectionView.CellRegistration<DigioCollectionViewCell, SpotLightModel>(
             cellNib: nib) { cell, _, itemIdentifier in
                 cell.updateURL(itemIdentifier.bannerURL)
+                cell.setModel(itemIdentifier)
+                cell.setTapHandler(self.viewModel)
             }
         
         return UICollectionViewDiffableDataSource<Int, SpotLightModel>(collectionView: self.spotLightCollectionView) { collectionView, indexPath, item in
@@ -39,6 +44,8 @@ class HomeViewController: UIViewController {
         let cellReg = UICollectionView.CellRegistration<DigioCollectionViewCell, ProductModel>(
             cellNib: nib) { cell, _, itemIdentifier in
                 cell.updateURL(itemIdentifier.imageURL)
+                cell.setModel(itemIdentifier)
+                cell.setTapHandler(self.viewModel)
             }
         
         return UICollectionViewDiffableDataSource<Int, ProductModel>(collectionView: self.productsCollectionView) { collectionView, indexPath, item in
@@ -62,9 +69,6 @@ class HomeViewController: UIViewController {
     }
     
     private func setupUI() {
-        spotLightCollectionView.delegate = spotLightDelegate
-        productsCollectionView.delegate = productsDelegate
-        
         viewModel.newSpotLightDataSub
             .sink {
                 self.update(dataSource: self.spotLightDatasource, with: $0)
@@ -72,7 +76,8 @@ class HomeViewController: UIViewController {
             .store(in: &cancellables)
         
         viewModel.newCashDataSub
-            .sink { self.cashImageView.sd_setImage(with: URL(string: $0.bannerURL))
+            .sink {
+                self.cashImageView.sd_setImage(with: URL(string: $0.bannerURL))
             }
             .store(in: &cancellables)
         
@@ -80,7 +85,6 @@ class HomeViewController: UIViewController {
             .sink { self.update(dataSource: self.productsDataSource, with: $0)
             }
             .store(in: &cancellables)
-        
     }
     
     // Nova maneira de atualizar dados
