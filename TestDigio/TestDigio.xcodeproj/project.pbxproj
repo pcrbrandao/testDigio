@@ -17,6 +17,7 @@
 		003BE3742CBAA79200473934 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE3662CBAA79200473934 /* AppDelegate.swift */; };
 		003BE3752CBAA79200473934 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE36D2CBAA79200473934 /* SceneDelegate.swift */; };
 		003BE3762CBAA79200473934 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003BE36E2CBAA79200473934 /* HomeViewController.swift */; };
+		00A01C322CBBFF8D00FC2D8A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A01C312CBBFF8D00FC2D8A /* DetailViewController.swift */; };
 		00D388582CBACAD70002390A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D388572CBACAD70002390A /* HomeViewModel.swift */; };
 		00D3885A2CBACEBF0002390A /* UINavigationController+TestDigio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */; };
 		00FCF18A2CBB674B00AF2F9B /* TestDigioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCF1892CBB674B00AF2F9B /* TestDigioService.swift */; };
@@ -52,6 +53,7 @@
 		003BE36B2CBAA79200473934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		003BE36D2CBAA79200473934 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		003BE36E2CBAA79200473934 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		00A01C312CBBFF8D00FC2D8A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		00D388572CBACAD70002390A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+TestDigio.swift"; sourceTree = "<group>"; };
 		00E4391B2CB9C3C500670FC5 /* TestDigio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDigio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 				00D388592CBACEBF0002390A /* UINavigationController+TestDigio.swift */,
 				0036B86F2CBB3F0E009AA591 /* DigioCollectionViewCell.swift */,
 				0036B8702CBB3F0E009AA591 /* DigioCollectionViewCell.xib */,
+				00A01C312CBBFF8D00FC2D8A /* DetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				0036B86E2CBB1B02009AA591 /* HomeCoordinator.swift in Sources */,
 				003BE3752CBAA79200473934 /* SceneDelegate.swift in Sources */,
 				003BE3762CBAA79200473934 /* HomeViewController.swift in Sources */,
+				00A01C322CBBFF8D00FC2D8A /* DetailViewController.swift in Sources */,
 				00D388582CBACAD70002390A /* HomeViewModel.swift in Sources */,
 				00FCF18A2CBB674B00AF2F9B /* TestDigioService.swift in Sources */,
 			);

@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     private lazy var viewModel: HomeViewModelProtocol = {
-        let coord = HomeCoordinator(navigator: self.navigationController ?? UINavigationController())
+        let coord = HomeCoordinator(navigator: self)
         return HomeViewModel(coordinator: coord)
     }()
     
@@ -66,6 +66,10 @@ class HomeViewController: UIViewController {
         setupUI()
         setupInitialData()
         viewModel.handleViewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        viewModel.handlePrepareSegue(destination: segue.destination)
     }
     
     private func setupUI() {

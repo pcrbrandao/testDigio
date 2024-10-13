@@ -278,6 +278,7 @@
                         <outlet property="cashImageView" destination="JQv-0o-8x3" id="yH8-F1-FU6"/>
                         <outlet property="productsCollectionView" destination="c08-D2-NYT" id="jkN-ui-fWg"/>
                         <outlet property="spotLightCollectionView" destination="60n-Hg-EMi" id="Q6S-2E-N5a"/>
+                        <segue destination="2rh-CB-xKP" kind="showDetail" identifier="detailSegue" id="HKy-Hi-3ff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -288,6 +289,47 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-634.35114503816794" y="-49.295774647887328"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="lLb-Mc-nVu">
+            <objects>
+                <viewController id="2rh-CB-xKP" customClass="DetailViewController" customModule="TestDigio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vIB-8V-8Fk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rmQ-eE-7zP">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="217"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="217" id="6NT-Dp-DdE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPi-ZB-Zp5">
+                                <rect key="frame" x="16" y="225" width="361" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SCh-ON-4Zh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rmQ-eE-7zP" firstAttribute="leading" secondItem="SCh-ON-4Zh" secondAttribute="leading" id="1WG-Eg-8n8"/>
+                            <constraint firstItem="SCh-ON-4Zh" firstAttribute="trailing" secondItem="wPi-ZB-Zp5" secondAttribute="trailing" constant="16" id="8EB-SM-43o"/>
+                            <constraint firstItem="wPi-ZB-Zp5" firstAttribute="top" secondItem="rmQ-eE-7zP" secondAttribute="bottom" constant="8" symbolic="YES" id="MVk-ej-Pd5"/>
+                            <constraint firstItem="wPi-ZB-Zp5" firstAttribute="leading" secondItem="SCh-ON-4Zh" secondAttribute="leading" constant="16" id="VfS-Ct-N9W"/>
+                            <constraint firstItem="rmQ-eE-7zP" firstAttribute="top" secondItem="SCh-ON-4Zh" secondAttribute="top" id="puQ-Ou-BrR"/>
+                            <constraint firstItem="rmQ-eE-7zP" firstAttribute="trailing" secondItem="SCh-ON-4Zh" secondAttribute="trailing" id="ylB-Kh-Erx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="wPi-ZB-Zp5" id="taH-uR-EAr"/>
+                        <outlet property="imageView" destination="rmQ-eE-7zP" id="djX-dR-cwC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qiO-Zs-6Iv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="154.96183206106869" y="-49.295774647887328"/>
         </scene>
     </scenes>
     <resources>

@@ -8,20 +8,11 @@
 import UIKit
 
 protocol Navigatable: AnyObject {
+    func performSegue(with identifier: String)
 }
 
-protocol Navigating: AnyObject {
-    func push(_ navigatable: Navigatable)
-}
-
-extension UINavigationController: Navigating {
-    func push(_ navigatable: any Navigatable) {
-        guard let vc = navigatable as? UIViewController else {
-            return
-        }
-        if self.viewControllers.contains(vc) {
-            popToViewController(vc, animated: true)
-        }
-        pushViewController(vc, animated: true)
+extension UIViewController: Navigatable {
+    func performSegue(with identifier: String) {
+        performSegue(withIdentifier: identifier, sender: self)
     }
 }

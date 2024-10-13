@@ -11,6 +11,7 @@ import Foundation
 protocol HomeViewModelProtocol: TapImageHandling {
     func handleViewDidLoad()
     func handleTapOnCash()
+    func handlePrepareSegue(destination: Navigatable)
     
     var newSpotLightDataSub: PassthroughSubject<[SpotLightModel], Never> { get }
     var newProductsDataSub: PassthroughSubject<[ProductModel], Never> { get }
@@ -45,6 +46,7 @@ extension HomeViewModel: HomeViewModelProtocol {
                     print("error feching data: \(error)")
                 }
             }, receiveValue: { model in
+                (self.coordinator as? TestDigioDataProtocol)?.data = model
                 self.newSpotLightDataSub.send(model.spotlight)
                 self.newCashDataSub.send(model.cash)
                 self.newProductsDataSub.send(model.products)
@@ -58,5 +60,9 @@ extension HomeViewModel: HomeViewModelProtocol {
     
     func handleTapOnModel(_ model: (any Codable)?) {
         coordinator?.goToDetail(from: model)
+    }
+    
+    func handlePrepareSegue(destination: any Navigatable) {
+        coordinator?.prepareToSegue(with: destination)
     }
 }

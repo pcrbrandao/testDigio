@@ -52,3 +52,9 @@ struct CashModel: Codable {
     let bannerURL: String
     let description: String
 }
+
+struct DetailModel {
+    let title: String
+    let url: String
+    let decription: String
+}
