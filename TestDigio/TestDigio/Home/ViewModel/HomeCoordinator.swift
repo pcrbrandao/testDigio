@@ -18,7 +18,7 @@ protocol HomeCoordinating: AnyObject {
     func prepareToSegue(with destination: Navigatable)
 }
 
-class HomeCoordinator {
+class HomeCoordinator: TestDigioDataProtocol {
     var data: TestDigioModel?
     
     private let navigator: Navigatable
@@ -62,7 +62,4 @@ extension HomeCoordinator: HomeCoordinating {
             viewController.model = DetailModel(title: model.title, url: model.bannerURL, decription: model.description)
         }
     }
-}
-
-extension HomeCoordinator: TestDigioDataProtocol {
 }
