@@ -17,6 +17,7 @@ class HomeViewController: UIViewController {
     
     private var cancellables: [AnyCancellable] = []
     private let collectionCellNibName = "DigioCollectionViewCell"
+    private let productCellNibName = "ProductCollectionViewCell"
     
     @IBOutlet private weak var spotLightCollectionView: UICollectionView!
     @IBOutlet private weak var cashImageView: UIImageView!
@@ -42,7 +43,7 @@ class HomeViewController: UIViewController {
     }
     
     private func configuredProductsDataSource() -> UICollectionViewDiffableDataSource<Int, ProductModel> {
-        let nib = UINib(nibName: collectionCellNibName, bundle: nil)
+        let nib = UINib(nibName: productCellNibName, bundle: nil)
         let cellReg = UICollectionView.CellRegistration<DigioCollectionViewCell, ProductModel>(
             cellNib: nib) { cell, _, itemIdentifier in
                 cell.updateURL(itemIdentifier.imageURL)
