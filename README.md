@@ -16,7 +16,7 @@ Bugs resolvidos:
 - Incompatibilidade do SwiftLint com XCode 16
 - Imcompatibilidade do CocoaPods com XCode 16
 
-## Foi utilizado o Interface Builder para a criação e navegação das telas por questão de praticidade. O mesmo pode ser feito com View Coded caso seja requisito.
+### Foi utilizado o Interface Builder para a criação e navegação das telas por questão de praticidade. O mesmo pode ser feito com View Coded caso seja requisito.
 O SwiftUI não pode ser utilizado devido ao requisito técnico do target mínimo do app, iOS 12.
 
 ![Captura de Tela 2024-10-11 às 16 09 18](https://github.com/user-attachments/assets/1bffa957-f10e-498d-b52c-a557e39470bb)
